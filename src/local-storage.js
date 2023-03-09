@@ -1,3 +1,4 @@
+// to fetch data from localstorage
 export const loadFromLocalState = (key) => {
   try {
     const localState = localStorage.getItem(key);

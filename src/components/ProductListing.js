@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import ProductElement from "./ProductElement";
 import { fetchProducts, applySorting } from "./../redux/actions/productActions";
 import { showNotification } from "./../Notification/config";

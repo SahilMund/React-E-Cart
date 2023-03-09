@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import { editProduct, removeProduct } from "../redux/actions/productActions";
 import { addItemToCart } from "../redux/actions/cartActions";
 import { showNotification } from "./../Notification/config";
@@ -12,6 +13,7 @@ const ProductElement = ({ data }) => {
   const [title, setTitle] = useState(data.title);
   const [price, setPrice] = useState(data.price);
   const [rate, setRate] = useState(data.rating.rate);
+
   const dispatch = useDispatch();
 
   //   handle maintaining states for the inputs
@@ -34,7 +36,10 @@ const ProductElement = ({ data }) => {
     e.preventDefault();
     // dispatch an action , which will update the details of a product
     if (rate < 0 || rate > 5) {
-      showNotification("Invalid Input !! MAX Available Rating is Five Star", "error");
+      showNotification(
+        "Invalid Input !! MAX Available Rating is Five Star",
+        "error"
+      );
       return;
     }
     dispatch(

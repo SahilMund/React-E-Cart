@@ -1,23 +1,25 @@
-import "./App.css";
 import {
   BrowserRouter as Router,
   Routes as Switch,
   Route,
 } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { useSelector } from "react-redux";
+
 import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
+import { saveTOLocalState } from "./local-storage";
 
 import Navbar from "./components/Navbar";
 import ProductListing from "./components/ProductListing";
 import CreateProduct from "./components/CreateProduct";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart";
-import { useSelector } from "react-redux";
-import { saveTOLocalState } from "./local-storage";
 
 function App() {
   const store = useSelector((state) => state);
 
+  // Storing redux store to local storage for persistent data
   saveTOLocalState("state", store);
 
   return (

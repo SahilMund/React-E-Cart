@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { createNewProduct } from "../redux/actions/productActions";
-import { showNotification } from './../Notification/config';
+import { showNotification } from "./../Notification/config";
 
 const CreateProduct = () => {
   // Using useState hook to keep track of the below states
@@ -25,20 +25,21 @@ const CreateProduct = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { title, description, price, rating: { rate } };
-    console.log(rate,data);
 
-    if (!price || price === '0') {
-      showNotification("Price of a product cannot be zero",'error');
+    // Validation check
+    if (!price || price === "0") {
+      showNotification("Price of a product cannot be zero", "error");
       return;
     }
 
-    
     if (rate < 0 || rate > 5) {
-      showNotification("Invalid Input !! MAX Available Rating is Five Star", "error");
+      showNotification(
+        "Invalid Input !! MAX Available Rating is Five Star",
+        "error"
+      );
       return;
     }
 
-    
     // dispatching the action which will create a new product
     dispatch(createNewProduct(data));
     // Navigate back to home page
@@ -48,7 +49,7 @@ const CreateProduct = () => {
 
   return (
     <div className="container card create-product-card">
-      <div className="row" style={{    'padding': '10px'}}>
+      <div className="row" style={{ padding: "10px" }}>
         <form className="col s12" onSubmit={handleSubmit}>
           <div className="row">
             <div className="input-field col s12">

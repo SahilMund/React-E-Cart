@@ -15,7 +15,6 @@ const CartItem = ({ data }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
   //   To remove the product from the cart
   const handleRemoveFromCart = (id) => {
     dispatch(removeItemFromCart(id));
@@ -39,17 +38,20 @@ const CartItem = ({ data }) => {
     }
   };
 
-
-  const handleNavigateToProductDetailsPage = () =>{
+  // Navigate to product details page when click on the product image
+  const handleNavigateToProductDetailsPage = () => {
     return navigate(`/product/${data.id}`);
-  }
+  };
 
   return (
     <div>
       {" "}
       <div className="col s12 m7">
         <div className="card horizontal cart-horizontal">
-          <div className="card-image cart-image" onClick={handleNavigateToProductDetailsPage}>
+          <div
+            className="card-image cart-image"
+            onClick={handleNavigateToProductDetailsPage}
+          >
             <img
               src={
                 data.image ||

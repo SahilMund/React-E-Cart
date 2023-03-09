@@ -1,10 +1,10 @@
 import { CartActionTypes } from "../constants/action-types";
-import { loadFromLocalState } from './../../local-storage';
+import { loadFromLocalState } from "./../../local-storage";
 
-const localData = loadFromLocalState('state');
+const localData = loadFromLocalState("state");
 
-
-const initialState = localData?.cart  ||{
+// Taking data from localStorage and setting it as initial value for the state
+const initialState = localData?.cart || {
   cartProducts: [],
 };
 export const cartReducer = (state = initialState, { type, payload }) => {

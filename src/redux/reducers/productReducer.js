@@ -1,9 +1,10 @@
 import { ProductActionTypes } from "../constants/action-types";
-import { loadFromLocalState } from './../../local-storage';
+import { loadFromLocalState } from "./../../local-storage";
 
-const localData = loadFromLocalState('state');
+const localData = loadFromLocalState("state");
 
-const initialState =  localData?.allProducts || {
+// Taking data from localStorage and setting it as initial value for the state
+const initialState = localData?.allProducts || {
   products: [], // Stores all the product details
   sortedProducts: [], // stores all the product details in a sorted order i.e. by price
   prodDetails: {}, // stores the single product details to show it on the product details page

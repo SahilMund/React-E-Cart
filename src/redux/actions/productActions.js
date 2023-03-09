@@ -13,7 +13,7 @@ export const fetchProducts = () => async (dispatch, getState) => {
     return;
   }
   //   If data is not present, then fetch the products form the API and pass the response as payload to reducer
-  
+
   const response = await axios.get(API_URI);
   dispatch({ type: ProductActionTypes.FETCH_PRODUCTS, payload: response.data });
 };

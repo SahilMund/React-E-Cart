@@ -26,12 +26,12 @@ const Navbar = () => {
                 style={{
                   marginLeft: "-30px",
                   fontSize: "larger",
-                  fontWeight:'bolder',
-                  color :'black'
+                  fontWeight: "bolder",
+                  color: "black",
                 }}
               >
                 {/* Showing the cart counts in the navbar */}
-               <sup> {cartProducts.length || 0}</sup>
+                <sup> {cartProducts.length || 0}</sup>
               </span>
               Cart Page
             </Link>
