@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.collection .collection-item.avatar {
+  min-height: 95px;
+  margin-bottom: 15px;
+  padding-left: 72px;
+  position: relative;
+}
+
+.collection .collection-item.avatar :not(.circle-clipper)>.circle {
+  position: absolute;
+  width: 55px;
+  height: 62px;
+}
+
+.product-element-content {
+  margin-left: 10px;
+
+}
+
+.material-icons {
+  cursor: pointer;
+}
+
+.sort-btn {
+  margin-left: 10px;
+  /* float: right; */
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.product-title {
+  width: 90%;
+  display: flex;
+}
+
+.delete-product-icon {
+  color: #ee6e73;
+}
+
+.preloader-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.create-product-card {
+
+  width: 70%;
+  margin: 20px auto;
+}
+
+.add-product-btn {
+  margin-left: 40%;
+}
+
+.details-container {
+  padding: 15px;
+}
+
+.card-image {
+  padding: 27px;
+
+}
+
+.card-image-content {
+  width: 75%;
+  margin-right: -25px;
+}
+
+.product-price-content {
+  margin-top: 12px !important;
+
+}
+
+.product-price-content,
+.product-rating-content {
+  font-weight: bold;
+}
+
+.cart-image {
+  /* max-width: 60%; */
+  width: 33%;
+}
+
+.card-stacked {
+  height: 90%;
+  /* justify-content: center; */
+  align-items: flex-start;
+}
+
+.cart-horizontal {
+  width: 80%;
+}
+
+.cart-collection {
+  border: none;
+  left: 10%;
+}
+
+.cart-remove-btn {
+  margin-left: 25px;
+}
+
+.increase-cart-btn {
+  margin-right: 3px;
+}
+
+.btn-floating {
+  margin-top: 2px;
+}
+
+.cart-tot-container {
+  float: right;
+  margin: 10px 123px !important;
+}
+
+.no-item {
+
+  margin: 50px auto;
+}
+
+.brand-logo > span{
+  font-family: 'Pacifico', cursive;
+}
